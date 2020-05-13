@@ -9,7 +9,6 @@ modules:
       - name: customerreport-hdi
         properties:
           TARGET_CONTAINER: '~{hdi-container-name}'
-      - name: retail-hdi
 resources:
   - name: customerreport-hdi
     parameters:
@@ -18,5 +17,3 @@ resources:
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
-  - name: retail-hdi
-    type: org.cloudfoundry.existing-service
