@@ -1,0 +1,22 @@
+ID: customerreport
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: customerreport-db
+    type: hdb
+    path: db
+    requires:
+      - name: customerreport-hdi
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: retail-hdi
+resources:
+  - name: customerreport-hdi
+    parameters:
+      config:
+        schema: CUSTOMERREPORT
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+  - name: retail-hdi
+    type: org.cloudfoundry.existing-service

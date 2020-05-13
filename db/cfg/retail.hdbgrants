@@ -1,0 +1,10 @@
+{
+  "retail-hdi": {
+    "object_owner" : {
+      "schema_roles":["com.acme.retail.auth::ViewConsumer#"]
+    },
+    "application_user" : {
+      "schema_roles":["com.acme.retail.auth::ViewConsumer"]
+    }
+  }
+}
